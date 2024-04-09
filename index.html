@@ -1,11 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Enugu UrbanHive</title>
-</head>
-<body>
-    <h3>COMING SOON!!!</h3>
-</body>
+
+    <!-- CUSTOM CSS -->
+    <link rel="stylesheet" href="./stylesheets/index.css" />
+    <link rel="stylesheet" href="./stylesheets/nav.css" />
+  </head>
+  <body>
+    <!-- THE HEADER -->
+    <header>
+      <i id="menu-icon" class="fa-solid fa-bars-staggered"></i>
+      <h1>
+        <a href="#">Enugu-Urban<span>Hive</span></a>
+      </h1>
+      <div class="search">
+        <input
+          type="search"
+          name=""
+          id=""
+          placeholder="Search Products, Brands, and Categories"
+        /><i class="fa-solid fa-magnifying-glass"></i>
+      </div>
+      <nav>
+        <div class="nav-items">
+          <div class="dropdown">
+            <i class="fa-solid fa-user"></i>
+             <span id="account">Account</span>
+            <i id="caret-icon" class="fa-solid fa-caret-down"></i>
+            <div class="dropdown-content">
+              <a href="#">Login</a>
+              <a href="#">Register</a>
+            </div>
+          </div>
+          <div><i class="fa-solid fa-cart-shopping"></i> <span class="item-counter">0</span></div>
+        </div>
+      </nav>
+    </header>
+
+    <script
+      src="https://kit.fontawesome.com/ed534340a8.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./js/nav.js"></script>
+  </body>
 </html>
