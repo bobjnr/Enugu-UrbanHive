@@ -18,6 +18,9 @@ const account = document.getElementById('account');
      caretIcon.classList.toggle('fa-caret-down');
    caretIcon.classList.toggle('fa-caret-up');
  }
- account.addEventListener('mouseover', function() {
+ account.addEventListener('mouseenter', function() {
+   caretIconClass();
+ });
+ account.addEventListener('mouseout', function() {
    caretIconClass();
  });
