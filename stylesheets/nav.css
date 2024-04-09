@@ -1,0 +1,102 @@
+
+:root{
+    --text-color: rgb(250, 248, 248);
+    --bg-color: rgb(1, 1, 46);
+}
+
+.see{
+    color: rgb(46, 1, 1);
+    color: rgb(45, 45, 1);
+    color: rgb(200, 200, 200);
+}
+
+header{
+    background-color: rgb(1, 1, 46);
+    color: var(--text-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100px;
+    padding: 5px 40px;
+}
+
+/* HEADER LINKS */
+
+header a{
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+header h3 a span{
+    color: rgb(236, 129, 6);
+    
+}
+/* THE NAV */
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav .search-items{
+    margin-right: 10px;
+}
+
+/* THE SEARCH */
+
+.search{
+    width: 350px;
+    height: 50px;
+    background-color: var(--text-color);
+    border-radius: 20px;
+    display: flex;
+    place-items: center;
+}
+
+.search input{
+    background-color: transparent;
+    border: none;
+    outline: none;
+    width: 320px;
+    height: 30px;
+    padding: 10px 20px;
+}
+
+.fa-magnifying-glass{
+    color: var(--bg-color);
+}
+
+/* ICONS GENERAL STYLE */
+.fa-solid{
+    font-size: 1.1rem;
+}
+/* THE MENU ICON */
+#menu-icon{
+    display: none;
+}
+
+#dropdown {
+  position: relative;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #333;
+  min-width: 200px;
+  padding: 10px;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+@media screen and (max-width: 768px) {
+  
+    /* THE MENU ICON */
+#menu-icon{
+    display: block;
+}
+
+}
