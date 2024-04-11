@@ -102,6 +102,7 @@ nav {
 #menu-icon {
   display: none;
   color: var(--secondary);
+  font-size: 1.5rem;
 }
 
 /* THE DROPDOWN */
@@ -293,12 +294,21 @@ nav {
   .search {
     right: 15%;
   }
+
+  .mobile-nav-site-identity i{
+    font-size: 1.3rem;
+  }
+
+  .mobile-nav-site-identity h2{
+    font-size: 1.5rem;
+  }
 }
 @media screen and (max-width: 468px) {
   .search {
     right: 9%;
   }
 }
+
 @media screen and (max-width: 428px) {
   .search {
     width: 280px;
@@ -311,6 +321,10 @@ nav {
     font-size: 0.7rem;
     width: 250px;
   }
+
+  .mobile-nav{
+    width: 90vw;
+  }
 }
 
 @media screen and (max-width: 385px) {
@@ -318,12 +332,17 @@ nav {
     right: 12%;
   }
 }
+
 @media screen and (max-width: 338px) {
   .header h1 {
     font-size: 1.5rem;
   }
   .search {
     right: 7%;
+  }
+
+  .mobile-nav{
+    padding: 40px;
   }
 }
 
@@ -334,10 +353,23 @@ nav {
   .search {
     right: 2%;
   }
+
+  .mobile-nav-site-identity h2{
+    font-size: 1.3rem;
+  }
 }
 
 @media screen and (max-width: 280px) {
   .search {
     right: 0%;
+  }
+
+  .mobile-nav-site-identity h2{
+    font-size: 1rem;
+  }
+
+  .mobile-nav-site-identity i{
+    font-size: 1rem;
+    font-family: 300;
   }
 }
