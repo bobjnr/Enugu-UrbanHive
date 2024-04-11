@@ -1,14 +1,21 @@
  // FOR THE MOBILE MENU ICONS
- const menuIcon = document.getElementById('menu-icon');
+ const menuIcon = document.querySelector('#menu-icon');
+ const mobileNav = document.querySelector('.mobile-nav');
+ const menuIcons = document.querySelectorAll('.mobile-menu-icon');
+
 
  
  function menuIconClass() {
-   menuIcon.classList.toggle('fa-bars-staggered');
-   menuIcon.classList.toggle('fa-xmark');
+   mobileNav.classList.toggle('show-nav')
  }
- menuIcon.addEventListener('click', function() {
-   menuIconClass();
- });
+
+ menuIcons.forEach((icon)=>{
+  icon.addEventListener('click', function() {
+    menuIconClass();
+  });
+ })
+
+
 
 //  FOR THE ACCOUNT CARET
 const caretIcon = document.getElementById('caret-icon');
