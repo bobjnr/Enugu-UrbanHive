@@ -1,19 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Enugu-UrbanHive | Register</title>
-     <!-- CUSTOM CSS -->
-     <link rel="stylesheet" href="../stylesheets/index.css" />
-     <link rel="stylesheet" href="../stylesheets/nav.css">
-     <link rel="stylesheet" href="../stylesheets/register.css">
-</head>
-<body>
+    <!-- CUSTOM CSS -->
+    <link rel="stylesheet" href="../stylesheets/index.css" />
+    <link rel="stylesheet" href="../stylesheets/nav.css" />
+    <link rel="stylesheet" href="../stylesheets/register.css" />
+  </head>
+  <body>
     <!--  THE NAV   -->
     <header>
-    <div class="header">
-        <i id="menu-icon" class="fa-solid fa-bars-staggered mobile-menu-icon"></i>
+      <div class="header">
+        <i
+          id="menu-icon"
+          class="fa-solid fa-bars-staggered mobile-menu-icon"
+        ></i>
         <h1>
           <a href="index.html">Enugu-Urban<span>Hive</span></a>
         </h1>
@@ -37,7 +40,7 @@
               </div>
             </div>
             <div>
-              <i  class="fa-solid fa-cart-shopping"></i>
+              <i class="fa-solid fa-cart-shopping"></i>
               <span class="item-counter">0</span>
             </div>
           </div>
@@ -54,7 +57,9 @@
             <p>Enugu-UrbanHive Account</p>
             <div class="nav-account-links">
               <a href=""><i class="fa-solid fa-right-to-bracket"></i>Login</a>
-              <a href="register.html"><i class="fa-solid fa-address-card"></i>Register</a>
+              <a href="register.html"
+                ><i class="fa-solid fa-address-card"></i>Register</a
+              >
             </div>
             <hr />
             <div class="mobile-nav-categories">
@@ -93,11 +98,32 @@
     <!-- THE REGISTRATION PAGE -->
 
     <div class="container">
-        <div class="registration">
-            <form action="">
-                <h1>welcome to Enugu-UrbanHive</h1>
-            </form>
-        </div>
+      <div class="registration">
+        <h2>welcome to Enugu-UrbanHive</h2>
+        <form action="">
+          <h3>Register Now</h3>
+          <div class="name">
+            <label for="fname">First Name <span>*</span></label>
+            <input type="text" id="fname" placeholder="Enter first name" />
+            <label for="lname">Last Name <span>*</span></label>
+            <input type="text" id="lname" placeholder="Enter last name" />
+          </div>
+          <div>
+            <label for="email">Email <span>*</span></label>
+            <input type="email" name="" id="email" placeholder="Enter email" />
+
+          </div>
+          <div>
+            <label for="pass">Password <span>*</span></label>
+            <input type="password" id="password" placeholder="Enter Password"/>
+          </div>
+          <div>
+            <label for="pass">Confirm Password <span>*</span></label>
+            <input type="password" id="conpassword" placeholder="Confirm password"/>
+          </div>
+          <button type="submit" id="btn">Register</button>
+        </form>
+      </div>
     </div>
 
     <!-- THE SCRIPTS -->
@@ -106,5 +132,6 @@
       crossorigin="anonymous"
     ></script>
     <script src="./js/nav.js"></script>
-</body>
+    <script src="./js/register.js"></script>
+  </body>
 </html>
