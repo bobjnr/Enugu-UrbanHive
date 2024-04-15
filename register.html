@@ -100,26 +100,32 @@
     <div class="container">
       <div class="registration">
         <h2>welcome to Enugu-UrbanHive</h2>
-        <form action="">
+        <form action="" id="form">
           <h3>Register Now</h3>
-          <div class="name">
+          <div class="inputcontainer">
             <label for="fname">First Name <span>*</span></label>
             <input type="text" id="fname" placeholder="Enter first name" />
+            <small></small>
+          </div>
+          <div class="inputcontainer">
             <label for="lname">Last Name <span>*</span></label>
             <input type="text" id="lname" placeholder="Enter last name" />
+            <small>second</small>
           </div>
-          <div>
+          <div class="inputcontainer">
             <label for="email">Email <span>*</span></label>
             <input type="email" name="" id="email" placeholder="Enter email" />
-
+            <small>third</small>
           </div>
-          <div>
+          <div class="inputcontainer">
             <label for="pass">Password <span>*</span></label>
             <input type="password" id="password" placeholder="Enter Password"/>
+            <small>fourth</small>
           </div>
-          <div>
+          <div class="inputcontainer">
             <label for="pass">Confirm Password <span>*</span></label>
             <input type="password" id="conpassword" placeholder="Confirm password"/>
+            <small>fifth</small>
           </div>
           <button type="submit" id="btn">Register</button>
         </form>

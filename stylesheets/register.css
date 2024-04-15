@@ -19,6 +19,10 @@
   margin: 80px 0;
 }
 
+.inputcontainer{
+  position: relative;
+}
+
 .registration h2{
   padding: 40px;
   font-family: var(--heading-font);
@@ -64,6 +68,27 @@
 
 .registration form input:hover{
   border-color: var(--secondary);
+}
+
+.inputcontainer.success input {
+  border-color: #2ecc71;
+}
+
+.inputcontainer.error input {
+  border-color: #e74e3c;
+}
+
+
+.inputcontainer small{
+  position: absolute;
+  bottom: -8px;
+  right: 0;
+  /* visibility: hidden; */
+}
+
+.inputcontainer.error small {
+  color: #e74e3c;
+  visibility: visible;
 }
 
 .registration form button{
