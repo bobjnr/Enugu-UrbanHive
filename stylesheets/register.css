@@ -3,6 +3,7 @@
 
 :root {
   --text-color: rgb(250, 248, 248);
+  --ring-color: rgba(250, 248, 248, 0.6);
   --bg-color: rgb(1, 1, 46);
   --secondary: rgb(236, 129, 6);
   --heading-font: "Roboto Condensed", sans-serif;
@@ -15,59 +16,57 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  height: 100vh;
+  height: 90vh;
   margin: 80px 0;
 }
 
-.inputcontainer{
-  position: relative;
-}
-
-.registration h2{
-  padding: 40px;
-  font-family: var(--heading-font);
-}
-
 .registration form {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
   background-color: var(--bg-color);
   color: var(--text-color);
-  padding: 40px;
-  border-radius: 10px;
-}
-
-.registration form h3{
-  font-weight: var(--heading-font);
-}
-
-.registration form label{
-  display: block;
-  margin-bottom: 5px;
-}
-
- .registration form label span{
-  color: rgb(248, 59, 59);
-}
-
-.registration form input, button{
+  border-radius: 5px;
+  padding: 20px;
   width: 400px;
-  padding: 10px;
-  border-radius:5px;
-  border: 2px solid transparent;
-  outline: none;
-  margin-bottom: 15px;
-  font-family: var(--body-font);
-  font-size: 1rem;
-  transition: border-color 0.3s;
-  position: relative;
+  max-width: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
 
 }
 
-.registration form input:hover{
-  border-color: var(--secondary);
+.registration form h2 {
+  margin-bottom: 30px;
+  font-family: var(--heading-font);
+  font-size: 2.2rem;
+}
+
+.inputcontainer {
+  margin-bottom: 10px;
+  position: relative;
+  padding-bottom: 20px;
+}
+
+.inputcontainer input {
+  border: 2px solid var(--ring-color);
+  background: transparent;
+  outline: none;
+  padding: 10px 7px;
+  border-radius: 5px;
+  width: 300px;
+  color: var(--text-color);
+}
+
+.inputcontainer input:hover{
+  border-color: var(--text-color);
+}
+
+.inputcontainer i {
+  position: absolute;
+  right: 0.7rem;
+  top: 0.6rem;
+  color: var(--text-color);
 }
 
 .inputcontainer.success input {
@@ -78,12 +77,12 @@
   border-color: #e74e3c;
 }
 
-
-.inputcontainer small{
+.inputcontainer small {
   position: absolute;
-  bottom: -8px;
-  right: 0;
-  /* visibility: hidden; */
+  bottom: 0;
+  left: 0.4rem;
+  font-size: 0.7rem;
+  visibility: hidden;
 }
 
 .inputcontainer.error small {
@@ -91,33 +90,29 @@
   visibility: visible;
 }
 
-.registration form button{
+.inputcontainer input::placeholder {
+  color: var(--text-color);
+}
+
+.registration button {
+  width: 300px;
+  padding: 10px 7px;
   background-color: var(--secondary);
- color: var(--text-color);
- margin-top: 5px;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  margin-bottom: 10px;
 }
 
-.registration form button:hover{
-  background-color: rgb(255, 166, 0);
+.login-link{
+  font-size: .8rem;
 }
 
-@media screen and (max-width: 500px){
-  .registration{
-    margin: 30px 0;
-  }
-  .registration form{
-    padding: 20px;
-  }
-  .registration form input, button{
-    width: 300px;
-  }
+.login-link p a{
+  color: var(--text-color);
+  text-decoration: none;
 }
 
-@media screen and (max-width: 500px){
-  .registration h2{
-    font-size: 1.3rem;
-  }
-  .registration form input, button{
-    width: 270px;
-  }
+.login-link p a:hover{
+  color: var(--secondary);
 }
