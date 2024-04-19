@@ -16,7 +16,7 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  height: 90vh;
+  min-height: 60vh;
   margin: 80px 0;
 }
 
@@ -24,7 +24,7 @@
   background-color: var(--bg-color);
   color: var(--text-color);
   border-radius: 5px;
-  padding: 20px;
+  padding: 30px;
   width: 400px;
   max-width: 100%;
   overflow: hidden;
@@ -102,6 +102,11 @@
   outline: none;
   border-radius: 5px;
   margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.registration button:hover{
+  background-color:rgba(236, 129, 6, 0.7);
 }
 
 .login-link{
@@ -115,4 +120,23 @@
 
 .login-link p a:hover{
   color: var(--secondary);
+}
+
+#eye, #eye1{
+  cursor: pointer;
+}
+
+@media screen and (max-width: 410px){
+  .registration form{
+    width: 300px;
+  }
+
+  .inputcontainer input{
+    width: 270px;
+  }
+
+  .registration button{
+    width: 270px;
+    margin-bottom: 10px;
+  }
 }

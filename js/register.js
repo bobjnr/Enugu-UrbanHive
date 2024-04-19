@@ -86,23 +86,23 @@ const eyeTwo = document.querySelector('#eye1')
 eyeOne.addEventListener('click', ()=>{
   if(password.type === 'password'){
     password.type = 'text'
-    eye.classList.add('fa-eye');
-    eye.classList.remove('fa-eye-slash'); 
+    eyeOne.classList.add('fa-eye');
+    eyeOne.classList.remove('fa-eye-slash'); 
   }else{
     password.type = 'password'
-    eye.classList.remove('fa-eye');
-    eye.classList.add('fa-eye-slash'); 
+    eyeOne.classList.remove('fa-eye');
+    eyeOne.classList.add('fa-eye-slash'); 
   }
 })
 
 eyeTwo.addEventListener('click', ()=>{
   if(confirmPassword.type === 'password'){
     confirmPassword.type = 'text'
-    eye.classList.add('fa-eye');
-    eye.classList.remove('fa-eye-slash'); 
+    eyeTwo.classList.add('fa-eye');
+    eyeTwo.classList.remove('fa-eye-slash'); 
   }else{
     confirmPassword.type = 'password'
-    eye.classList.remove('fa-eye');
-    eye.classList.add('fa-eye-slash'); 
+    eyeTwo.classList.remove('fa-eye');
+    eyeTwo.classList.add('fa-eye-slash'); 
   }
 })
