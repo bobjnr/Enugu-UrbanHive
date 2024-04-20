@@ -1,3 +1,9 @@
+:root {
+    --text-color: rgb(250, 248, 248);
+    --bg-color: rgb(1, 1, 46);
+    --secondary: rgb(236, 129, 6);
+}
+
 *{
     margin: 0;
     padding: 0;
@@ -48,6 +54,7 @@ body{
     position: absolute;
     right: 20px;
     top: 50%;
+    color: #fff;
     transform: translateY(-50%);
     font-size: 20px;
 }
