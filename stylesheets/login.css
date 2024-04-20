@@ -1,4 +1,14 @@
+<<<<<<< HEAD
 /* *{
+=======
+:root {
+    --text-color: rgb(250, 248, 248);
+    --bg-color: rgb(1, 1, 46);
+    --secondary: rgb(236, 129, 6);
+}
+
+*{
+>>>>>>> b80ccafc2aae4f08e6471e28dcda91a68e93bcab
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -48,6 +58,7 @@ body{
     position: absolute;
     right: 20px;
     top: 50%;
+    color: #fff;
     transform: translateY(-50%);
     font-size: 20px;
 }
