@@ -1,9 +1,68 @@
-
-/* footer{
-    background-color: green;
-} */
+:root {
+    --text-color: rgb(250, 248, 248);
+    --ring-color: rgba(250, 248, 248, 0.6);
+    --bg-color: rgb(1, 1, 46);
+    --secondary: rgb(236, 129, 6);
+    --heading-font: "Roboto Condensed", sans-serif;
+    --body-font: "Poppins", sans-serif;
+  }
 
 footer{
-    background-color: red;
-    margin-top: 100px;
+    background: var(--bg-color);
+    margin-top: 40px;
+    padding: 40px 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--text-color);
+    font-family: var(--body-font);
+}
+
+footer i{
+    color: var(--secondary);
+    font-size: 1.5rem;
+    cursor: pointer;
+    margin-right: 5px;
+}
+
+footer i:hover{
+    color: var(--text-color);
+}
+
+.footer-links a{
+    display: block;
+    margin-top: 5px;
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+.footer-links a:hover{
+    color: var(--secondary);
+}
+
+.footer-links a i{
+    margin-right: 10px;
+}
+
+.footer-text{
+    margin-top: 20px;
+}
+
+@media screen and (max-width: 600px){
+footer{
+    flex-direction: column;
+}
+.footer-others{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 30px;
+}
+}
+
+@media screen and (max-width: 400px){
+.footer-others p{
+    font-size: 14px;
+}
 }
