@@ -1,3 +1,4 @@
+
 :root {
     --text-color: rgb(250, 248, 248);
     --ring-color: rgba(250, 248, 248, 0.6);
@@ -65,4 +66,5 @@ footer{
 .footer-others p{
     font-size: 14px;
 }
+
 }
