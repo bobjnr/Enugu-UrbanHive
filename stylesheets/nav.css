@@ -3,15 +3,12 @@
 
 :root {
   --text-color: rgb(250, 248, 248);
+  --ring-color: rgba(250, 248, 248, 0.6);
   --bg-color: rgb(1, 1, 46);
   --secondary: rgb(236, 129, 6);
+  --heading-font: "Roboto Condensed", sans-serif;
+  --body-font: "Poppins", sans-serif;
 }
-
-/* .see {
-  color: rgb(46, 1, 1);
-  color: rgb(45, 45, 1);
-  color: rgb(200, 200, 200);
-} */
 
 header{
   width: 100%;
@@ -87,6 +84,10 @@ nav {
   padding: 10px 20px;
   font-size: 0.9rem;
   font-weight: 500;
+}
+
+.search input::placeholder{
+  font-family: var(--body-font);
 }
 
 .fa-magnifying-glass {
@@ -180,6 +181,8 @@ nav {
     top: 80px;
     right: 28%;
   }
+
+
   #menu-icon {
     display: block;
   }
