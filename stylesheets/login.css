@@ -1,11 +1,11 @@
 <<<<<<< HEAD
 /* *{
 =======
-:root {
+/* :root {
     --text-color: rgb(250, 248, 248);
     --bg-color: rgb(1, 1, 46);
     --secondary: rgb(236, 129, 6);
-}
+} */
 
 *{
 >>>>>>> b80ccafc2aae4f08e6471e28dcda91a68e93bcab
@@ -14,19 +14,22 @@
     box-sizing: border-box;
 }
 
-body{
+/* body{
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-} */
+}  */
 
 .wrapper{
     width: 420px;
     background-color: rgb(1, 1, 46);
     color: #fff;
     padding: 30px 40px;
-
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 70px;
 }
 .wrapper h1{
     font-size: 36px;
@@ -78,7 +81,7 @@ body{
     text-decoration: none;
 }
 .remember-forgot a:hover{
-    text-decoration: underline;
+    color: rgb(236, 129, 6);
 }
 
 .wrapper .btn{
@@ -87,12 +90,15 @@ body{
     background-color: rgb(236, 129, 6);
     border: none;
     outline: none;
-    /* border-radius: 40px; */
+    border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, .1);
     cursor: pointer;
     font-size: 16px;
-    color: #fff;
     font-weight: 600;
+}
+.wrapper .btn:hover{
+    background-color:rgba(236, 129, 6, 0.7);
+    color: black;
 }
 .wrapper .register-link{
     font-size: 14.5px;
@@ -105,5 +111,5 @@ body{
     font-weight: 600;
 }
 .register-link p a:hover{
-    text-decoration: underline;
+    color: rgb(236, 129, 6);
 }

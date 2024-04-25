@@ -23,7 +23,7 @@ const checkInputs = ()=>{
 
 
   if(firstNameValue === ''){
-    setErrorFor(firstName, 'First name cannot blank')
+    setErrorFor(firstName, 'First name cannot be blank')
   }else{
     setSuccessFor(firstName)
   }
