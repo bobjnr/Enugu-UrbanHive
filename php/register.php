@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Enugu-UrbanHive | Register</title>
     <!-- CUSTOM CSS -->
-    <link rel="stylesheet" href="../stylesheets/index.css" />
-    <link rel="stylesheet" href="../stylesheets/nav.css" />
-    <link rel="stylesheet" href="../stylesheets/register.css" />
+    <link rel="stylesheet" href="./stylesheets/index.css" />
+    <link rel="stylesheet" href="./stylesheets/nav.css" />
+    <link rel="stylesheet" href="./stylesheets/register.css" />
     <link rel="stylesheet" href="./stylesheets/footer.css">
   </head>
   <body>
@@ -36,8 +36,8 @@
               <span id="account">Account</span>
               <i id="caret-icon" class="fa-solid fa-caret-down"></i>
               <div class="dropdown-content">
-                <a href="login.html">Login</a>
-                <a href="register.html">Register</a>
+                <a href="login.php">Login</a>
+                <a href="register.php">Register</a>
               </div>
             </div>
             <div>
@@ -58,7 +58,7 @@
             <p>Enugu-UrbanHive Account</p>
             <div class="nav-account-links">
               <a href=""><i class="fa-solid fa-right-to-bracket"></i>Login</a>
-              <a href="register.html"
+              <a href="register.php"
                 ><i class="fa-solid fa-address-card"></i>Register</a
               >
             </div>
@@ -96,40 +96,86 @@
       </div>
     </header>
 
+
     <!-- THE REGISTRATION PAGE -->
+    <?php
+    include("db.php");
+    
+    if(isset($_POST['submit'])){
+        $firstname = mydestroy($_POST['first_name']);
+        $lastname = mydestroy($_POST['last_name']);
+        $email = mydestroy($_POST['myemail']);
+        $phone = mydestroy($_POST['phone_number']);
+        $pass = mydestroy($_POST['mypass']);
+        $rpass = mydestroy($_POST['mypass2']);
+    
+        if($rpass==$pass){
+            $pass = password_hash($pass,PASSWORD_DEFAULT);
+    
+            $select = mysqli_query($connect, "select * from users where first_name = '$firstname' ");
+            $num = mysqli_num_rows($select);
+            if($num>0){
+                echo "user exists";
+            }
+            else{
+                $sign = mysqli_query($connect, "insert into users (first_name, last_name, email, phone_number, password) 
+                values('$firstname', '$lastname', '$email', '$phone', '$pass')") or die ('cant insert'.mysqli_error($connect));
+                if($sign){echo 'Registration successful!';}
+            }
+        }
+        if($rpass!=$pass1){
+            echo 'password does not match';
+        }
+    }
+    
+    function mydestroy($dest){
+        $dest = trim($dest);
+        $dest = htmlentities($dest);
+        $dest = htmlspecialchars($dest, ENT_QUOTES, "UTF-8");
+        $dest = strip_tags($dest);
+        $dest = stripslashes($dest);
+        return $dest;
+    }
+    ?>
+
 
     <div class="container">
       <div class="registration">
-        <form action="" id="form">
+        <form action="signup.php" id="form" method="post" enctype="multipart/form-data">
           <h2>Register Now</h2>
           <div class="inputcontainer">
-            <input type="text" id="fname" placeholder="Enter first name" />
+            <input name="first_name" type="text" id="fname" placeholder="Enter first name" />
             <i class="fa-solid fa-user"></i>
             <small>first</small>
           </div>
           <div class="inputcontainer">
-            <input type="text" id="lname" placeholder="Enter last name" />
+            <input name="last_name" type="text" id="lname" placeholder="Enter last name" />
             <i class="fa-solid fa-user"></i>
             <small>second</small>
           </div>
           <div class="inputcontainer">
-            <input type="text" name="" id="email" placeholder="Enter email" />
+            <input name="myemail" type="text" name="" id="email" placeholder="Enter email" />
             <i class="fa-solid fa-envelope"></i>
             <small>third</small>
           </div>
           <div class="inputcontainer">
-            <input type="password" id="password" placeholder="Enter Password"/>
+            <input name="phone_number" type="text" name="" id="phone" placeholder="Enter phone number" />
+            <i class="fa-solid fa-envelope"></i>
+            <small>third</small>
+          </div>
+          <div class="inputcontainer">
+            <input name="mypass" type="password" id="password" placeholder="Enter Password"/>
             <i class="fa-solid fa-eye-slash" id="eye"></i>
             <small>fourth</small>
           </div>
           <div class="inputcontainer">
-            <input type="password" id="conpassword" placeholder="Confirm password"/>
+            <input name="mypass2" type="password" id="conpassword" placeholder="Confirm password"/>
             <i class="fa-solid fa-eye-slash" id="eye1"></i>
             <small>fifth</small>
           </div>
-          <button type="submit" id="btn">Register</button>
+          <button name="submit" type="submit" id="btn">Register</button>
           <div class="login-link">
-            <p>Do you have an account? <a href="#">Login</a></p>
+            <p>Do you have an account? <a href="login.php">Login</a></p>
         </div>
         </form>
       </div>
@@ -140,10 +186,8 @@
       <div class="footer-links">
         <a href=""><i class="fa-solid fa-address-card"></i>About Us</a>
         <a href=""><i class="fa-solid fa-address-book"></i>Contact Us</a>
-        <a href="login.html"><i class="fa-solid fa-right-to-bracket"></i>Login</a>
-        <a href="register.html"
-          ><i class="fa-solid fa-address-card"></i>Register</a
-        >
+        <a href="login.php"><i class="fa-solid fa-right-to-bracket"></i>Login</a>
+        <a href="register.php"><i class="fa-solid fa-address-card"></i>Register</a>
       </div>
       <div class="footer-others">
         <div class="footer-icons">

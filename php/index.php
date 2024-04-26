@@ -8,7 +8,7 @@
     <!-- CUSTOM CSS -->
     <link rel="stylesheet" href="./stylesheets/index.css" />
     <link rel="stylesheet" href="./stylesheets/nav.css" />
-    <link rel="stylesheet" href="/stylesheets/footer.css">
+    <link rel="stylesheet" href="./stylesheets/footer.css">
   </head>
   <body>
     <!-- THE HEADER -->
@@ -36,8 +36,8 @@
               <span id="account">Account</span>
               <i id="caret-icon" class="fa-solid fa-caret-down"></i>
               <div class="dropdown-content">
-                <a href="login.html">Login</a>
-                <a href="register.html">Register</a>
+                <a href="login.php">Login</a>
+                <a href="register.php">Register</a>
               </div>
             </div>
             <div>
@@ -57,10 +57,8 @@
           <div class="mobile-nav-account">
             <p>Enugu-UrbanHive Account</p>
             <div class="nav-account-links">
-              <a href=""><i class="fa-solid fa-right-to-bracket"></i>Login</a>
-              <a href="register.html"
-                ><i class="fa-solid fa-address-card"></i>Register</a
-              >
+              <a href="login.php"><i class="fa-solid fa-right-to-bracket"></i>Login</a>
+              <a href="register.php"><i class="fa-solid fa-address-card"></i>Register</a>
             </div>
             <hr />
             <div class="mobile-nav-categories">
@@ -104,10 +102,8 @@
       <div class="footer-links">
         <a href=""><i class="fa-solid fa-address-card"></i>About Us</a>
         <a href=""><i class="fa-solid fa-address-book"></i>Contact Us</a>
-        <a href="login.html"><i class="fa-solid fa-right-to-bracket"></i>Login</a>
-        <a href="register.html"
-          ><i class="fa-solid fa-address-card"></i>Register</a
-        >
+        <a href="login.php"><i class="fa-solid fa-right-to-bracket"></i>Login</a>
+        <a href="register.php"><i class="fa-solid fa-address-card"></i>Register</a>
       </div>
       <div class="footer-others">
         <div class="footer-icons">
