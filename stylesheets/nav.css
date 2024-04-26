@@ -142,6 +142,7 @@ nav {
 /* THE CART */
 .fa-cart-shopping {
   position: relative;
+  cursor: pointer;
 }
 .item-counter {
   position: absolute;

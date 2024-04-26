@@ -1,0 +1,127 @@
+:root {
+  --text-color: rgb(250, 248, 248);
+  --ring-color: rgba(250, 248, 248, 0.6);
+  --bg-color: rgb(1, 1, 46);
+  --secondary: rgb(236, 129, 6);
+  --heading-font: "Roboto Condensed", sans-serif;
+  --body-font: "Poppins", sans-serif;
+  --shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.header {
+  position: relative;
+  /* overflow: hidden; */
+}
+
+.cart-summary {
+  background-color: var(--secondary);
+  color: var(--bg-color);
+  max-width: 280px;
+  min-width: 200px;
+  min-height: 50vh;
+  max-height: 80vh;
+  position: absolute;
+  right: -100vw;
+  margin-top: 1px;
+  font-family: var(--body-font);
+  padding: 10px;
+  text-align: center;
+  border-radius: 5px;
+  overflow-y: auto;
+  scroll-behavior: smooth;
+  transition: all 0.5s;
+  box-shadow: var(--shadow);
+}
+
+
+.cart-summary::-webkit-scrollbar {
+    width: 5px; 
+}
+
+.cart-summary::-webkit-scrollbar-thumb {
+    background-color: var(--bg-color); 
+    border-radius: 5px; 
+}
+
+.cart-summary::-webkit-scrollbar-track {
+    background-color: var(--secondary); 
+}
+
+.cart-summary.show-cart{
+    right: 1px;
+}
+
+.cart-summary-head {
+  background-color: var(--bg-color);
+  border-radius: 3px;
+  height: 40px;
+  padding: 10px;
+  margin: 5px;
+  margin-bottom: 10px;
+  color: var(--text-color);
+  display: flex;
+  align-items: center;
+}
+
+/* .cart-item{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: white;
+    border-bottom: 1px solid #aaa;
+    border-radius: 3px;
+    margin: 10px 10px;
+} */
+
+.cart-summary-foot{
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0px;
+    padding: 10px 0px;
+    border-top: 1px solid #333;
+}
+
+.cart-summary-btn{
+    background-color: var(--bg-color);
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    padding: 7px 25px;
+    cursor: pointer;
+    color: var(--text-color);
+}
+
+.cart-summary-btn:hover{
+    background-color: var(--ring-color);
+}
+
+.cart-item{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: var(--text-color);
+    border-bottom: 1px solid var(--bg-color);
+    border-radius: 3px;
+    margin: 10px 10px;
+    box-shadow: var(--shadow);
+}
+.row-img{
+    width: 40px;
+    height: 40px;
+    border-radius: 50px;
+    border: 1px solid var(--bg-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.rowimg{
+    max-width: 25px;
+    max-height: 25px;
+    border-radius: 50%;
+}
+.fa-trash:hover{
+    cursor: pointer;
+    color:var(--bg-color);
+}

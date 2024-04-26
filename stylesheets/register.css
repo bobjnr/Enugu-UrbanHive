@@ -10,6 +10,10 @@
   --body-font: "Poppins", sans-serif;
 }
 
+#root{
+  display: none;
+}
+
 .registration {
   font-family: var(--body-font);
   display: flex;
