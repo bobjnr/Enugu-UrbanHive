@@ -1,0 +1,74 @@
+[
+    {
+        "id": 0,
+        "image": "assets/1.jpg",
+        "title": "Isi Agu Wear",
+        "price": 25000
+    },
+    {
+        "id": 1,
+        "image": "assets/2.png",
+        "title": "Men Cap",
+        "price": 6000
+    },
+    {
+        "id": 2,
+        "image": "assets/3.png",
+        "title": "Isi Agu Fabric (3yards)",
+        "price": 21000
+    },
+    {
+        "id": 3,
+        "image": "assets/5.png",
+        "title": "Igbo igba nkwu attire",
+        "price": 10000
+    },
+    {
+        "id": 4,
+        "image": "assets/4.png",
+        "title": "African Traditional Dress",
+        "price": 15000
+    },
+    {
+        "id": 5,
+        "image": "assets/6.png",
+        "title": "Isi Agu Men Wear",
+        "price": 20000
+    },
+    {
+        "id": 6,
+        "image": "assets/7.png",
+        "title": "Igbo Ozo Cap",
+        "price": 5000
+    },
+    {
+        "id": 7,
+        "image": "assets/9.png",
+        "title": "Boy isiagu outfit",
+        "price": 30000
+    },
+    {
+        "id": 8,
+        "image": "assets/8.png",
+        "title": "Igbo Red Cap",
+        "price": 4000
+    },
+    {
+        "id": 9,
+        "image": "assets/10.png",
+        "title": "Walking staff",
+        "price": 5000
+    },
+    {
+        "id": 10,
+        "image": "assets/11.png",
+        "title": "Tiger Eye Stone Beads",
+        "price": 2500
+    },
+    {
+        "id": 11,
+        "image": "assets/12.png",
+        "title": "Traditional Wedding Attire",
+        "price": 35000
+    }
+]
