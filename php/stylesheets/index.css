@@ -1,20 +1,167 @@
 @import url("https://fonts.googleapis.com/css2?family=Grand+Hotel&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap");
 
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
 :root {
-    --text-color: rgb(250, 248, 248);
-    --ring-color: rgba(250, 248, 248, 0.6);
-    --bg-color: rgb(1, 1, 46);
-    --secondary: rgb(236, 129, 6);
-    --heading-font: "Roboto Condensed", sans-serif;
-    --body-font: "Poppins", sans-serif;
-  }
+  --text-color: rgb(250, 248, 248);
+  --ring-color: rgba(250, 248, 248, 0.6);
+  --bg-color: rgb(1, 1, 46);
+  --secondary: rgb(236, 129, 6);
+  --heading-font: "Roboto Condensed", sans-serif;
+  --body-font: "Poppins", sans-serif;
+  --shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
 
-.container{
-    padding-top: 100px;
+body {
+  overflow-y: auto;
+}
+body::-webkit-scrollbar {
+  width: 10px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: var(--secondary);
+  border-radius: 5px;
+}
+
+body::-webkit-scrollbar-track {
+  background-color: var(--bg-color);
+}
+.container {
+  padding-top: 100px;
+}
+
+#root {
+  padding: 40px 50px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 20px;
+  place-content: center;
+  place-items: center;
+}
+
+.box {
+  width: 280px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid var(--secondary);
+  border-radius: 5px;
+  padding: 15px;
+  box-shadow: var(--shadow);
+  font-family: var(--body-font);
+  cursor: pointer;
+  transition: all 1s;
+}
+
+.box:hover{
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.7);
+}
+.img-box {
+  width: 100%;
+  height: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.images {
+  max-width: 90%;
+  max-height: 90%;
+  object-fit: cover;
+  object-position: center;
+}
+.bottom-content {
+  margin-top: 20px;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 110px;
+}
+
+.box h2 {
+  font-size: 20px;
+  color: var(--bg-color);
+  font-family: var(--heading-font);
+}
+.box button {
+  width: 100%;
+  position: relative;
+  border: none;
+  border-radius: 5px;
+  background-color: var(--secondary);
+  padding: 7px 25px;
+  cursor: pointer;
+  color: var(--text-color);
+}
+.box button:hover {
+  background-color: var(--bg-color);
+}
+
+@media screen and (max-width: 1190px) {
+  #root {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media screen and (max-width: 996px) {
+    .box{
+        width: 250px;
+    }
+
+}
+@media screen and (max-width: 886px) {
+    .box{
+        width: 210px;
+    }
+
+}
+
+@media screen and (max-width: 820px){
+    .container{
+        padding-top: 150px;
+    }
+}
+
+@media screen and (max-width: 700px){
+    #root {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .box{
+        width: 250px;
+    }
+}
+
+@media screen and (max-width: 535px){
+
+      .box{
+        width: 210px;
+    }
+}
+@media screen and (max-width: 460px){
+
+      .box{
+        width: 170px;
+    }
+}
+@media screen and (max-width: 373px){
+
+      .box{
+        width: 150px;
+    }
+}
+@media screen and (max-width: 340px){
+    #root {
+        grid-template-columns: repeat(1, 1fr);
+      }
+      .box{
+        width: 250px;
+    }
 }

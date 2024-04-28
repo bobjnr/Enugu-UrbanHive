@@ -5,13 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Enugu-UrbanHive | Register</title>
     <!-- CUSTOM CSS -->
+<<<<<<< HEAD:php/register.php
     <link rel="stylesheet" href="./stylesheets/index.css" />
     <link rel="stylesheet" href="./stylesheets/nav.css" />
     <link rel="stylesheet" href="./stylesheets/register.css" />
+=======
+    <link rel="stylesheet" href="../stylesheets/index.css" />
+    <link rel="stylesheet" href="../stylesheets/nav.css" />
+    <link rel="stylesheet" href="./stylesheets/cart.css">
+    <link rel="stylesheet" href="../stylesheets/register.css" />
+>>>>>>> 3b7eeeda1c24982525174ff28472b9c70d318039:register.html
     <link rel="stylesheet" href="./stylesheets/footer.css">
   </head>
   <body>
+
     <!--  THE NAV   -->
+
     <header>
       <div class="header">
         <i
@@ -26,7 +35,7 @@
             type="search"
             name=""
             id=""
-            placeholder="Search Products"
+            placeholder="Search Products, Brands, and Categories"
           /><i class="fa-solid fa-magnifying-glass"></i>
         </div>
         <nav>
@@ -41,8 +50,8 @@
               </div>
             </div>
             <div>
-              <i class="fa-solid fa-cart-shopping"></i>
-              <span class="item-counter">0</span>
+              <i class="fa-solid fa-cart-shopping" id="cart"></i>
+              <span class="item-counter" id="counter">0</span>
             </div>
           </div>
         </nav>
@@ -94,8 +103,27 @@
           </div>
         </div>
       </div>
+
+      <!-- THE CART -->
+
+      <div class="cart-summary">
+        <div class="cart-summary-head"><p>My Cart</p></div>
+        <div id="cartItem">Your cart is empty</div>
+        <div class="cart-summary-foot">
+            <h4>Total</h4>
+            <h4 id="total"># 0.00</h4>
+        </div>
+        <button class="cart-summary-btn">Checkout</button>
+      </div>
     </header>
 
+<<<<<<< HEAD:php/register.php
+=======
+    <!-- Products -->
+    
+    <div id="root"></div>
+
+>>>>>>> 3b7eeeda1c24982525174ff28472b9c70d318039:register.html
 
     <!-- THE REGISTRATION PAGE -->
     <?php
@@ -208,5 +236,6 @@
     ></script>
     <script src="./js/nav.js"></script>
     <script src="./js/register.js"></script>
+    <script src="./js/addToCart.js"></script>
   </body>
 </html>

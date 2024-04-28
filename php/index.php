@@ -8,7 +8,12 @@
     <!-- CUSTOM CSS -->
     <link rel="stylesheet" href="./stylesheets/index.css" />
     <link rel="stylesheet" href="./stylesheets/nav.css" />
+<<<<<<< HEAD:php/index.php
     <link rel="stylesheet" href="./stylesheets/footer.css">
+=======
+    <link rel="stylesheet" href="./stylesheets/cart.css">
+    <link rel="stylesheet" href="/stylesheets/footer.css">
+>>>>>>> 3b7eeeda1c24982525174ff28472b9c70d318039:index.html
   </head>
   <body>
     <!-- THE HEADER -->
@@ -26,7 +31,7 @@
             type="search"
             name=""
             id=""
-            placeholder="Search Products, Brands, and Categories"
+            placeholder="Search Products"
           /><i class="fa-solid fa-magnifying-glass"></i>
         </div>
         <nav>
@@ -41,8 +46,8 @@
               </div>
             </div>
             <div>
-              <i class="fa-solid fa-cart-shopping"></i>
-              <span class="item-counter">0</span>
+              <i class="fa-solid fa-cart-shopping" id="cart"></i>
+              <span class="item-counter" id="counter">0</span>
             </div>
           </div>
         </nav>
@@ -92,10 +97,23 @@
           </div>
         </div>
       </div>
+
+      <!-- THE CART -->
+
+      <div class="cart-summary">
+        <div class="cart-summary-head"><p>My Cart</p></div>
+        <div id="cartItem">Your cart is empty</div>
+        <div class="cart-summary-foot">
+            <h4>Total</h4>
+            <h4 id="total"># 0.00</h4>
+        </div>
+        <button class="cart-summary-btn">Checkout</button>
+      </div>
     </header>
 
+
     <div class="container">
-      <h1>BODY</h1>
+      <div id="root"></div>
     </div>
 
     <footer>
@@ -122,5 +140,6 @@
       crossorigin="anonymous"
     ></script>
     <script src="./js/nav.js"></script>
+    <script src="./js/addToCart.js"></script>
   </body>
 </html>
