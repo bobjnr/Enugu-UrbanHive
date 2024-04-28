@@ -3,18 +3,20 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Enugu-UrbanHive | Register</title>
+    <title>Enugu UrbanHive</title>
+
     <!-- CUSTOM CSS -->
-    <link rel="stylesheet" href="../stylesheets/index.css" />
-    <link rel="stylesheet" href="../stylesheets/nav.css" />
-    <link rel="stylesheet" href="./stylesheets/cart.css">
-    <link rel="stylesheet" href="../stylesheets/register.css" />
+    <link rel="stylesheet" href="./stylesheets/index.css" />
+    <link rel="stylesheet" href="./stylesheets/nav.css" />
+<<<<<<< HEAD:php/index.php
     <link rel="stylesheet" href="./stylesheets/footer.css">
+=======
+    <link rel="stylesheet" href="./stylesheets/cart.css">
+    <link rel="stylesheet" href="/stylesheets/footer.css">
+>>>>>>> 3b7eeeda1c24982525174ff28472b9c70d318039:index.html
   </head>
   <body>
-
-    <!--  THE NAV   -->
-
+    <!-- THE HEADER -->
     <header>
       <div class="header">
         <i
@@ -29,7 +31,7 @@
             type="search"
             name=""
             id=""
-            placeholder="Search Products, Brands, and Categories"
+            placeholder="Search Products"
           /><i class="fa-solid fa-magnifying-glass"></i>
         </div>
         <nav>
@@ -39,8 +41,8 @@
               <span id="account">Account</span>
               <i id="caret-icon" class="fa-solid fa-caret-down"></i>
               <div class="dropdown-content">
-                <a href="login.html">Login</a>
-                <a href="register.html">Register</a>
+                <a href="login.php">Login</a>
+                <a href="register.php">Register</a>
               </div>
             </div>
             <div>
@@ -60,10 +62,8 @@
           <div class="mobile-nav-account">
             <p>Enugu-UrbanHive Account</p>
             <div class="nav-account-links">
-              <a href=""><i class="fa-solid fa-right-to-bracket"></i>Login</a>
-              <a href="register.html"
-                ><i class="fa-solid fa-address-card"></i>Register</a
-              >
+              <a href="login.php"><i class="fa-solid fa-right-to-bracket"></i>Login</a>
+              <a href="register.php"><i class="fa-solid fa-address-card"></i>Register</a>
             </div>
             <hr />
             <div class="mobile-nav-categories">
@@ -111,59 +111,17 @@
       </div>
     </header>
 
-    <!-- Products -->
-    
-    <div id="root"></div>
-
-
-    <!-- THE REGISTRATION PAGE -->
 
     <div class="container">
-      <div class="registration">
-        <form action="" id="form">
-          <h2>Register Now</h2>
-          <div class="inputcontainer">
-            <input type="text" id="fname" placeholder="Enter first name" />
-            <i class="fa-solid fa-user"></i>
-            <small>first</small>
-          </div>
-          <div class="inputcontainer">
-            <input type="text" id="lname" placeholder="Enter last name" />
-            <i class="fa-solid fa-user"></i>
-            <small>second</small>
-          </div>
-          <div class="inputcontainer">
-            <input type="text" name="" id="email" placeholder="Enter email" />
-            <i class="fa-solid fa-envelope"></i>
-            <small>third</small>
-          </div>
-          <div class="inputcontainer">
-            <input type="password" id="password" placeholder="Enter Password"/>
-            <i class="fa-solid fa-eye-slash" id="eye"></i>
-            <small>fourth</small>
-          </div>
-          <div class="inputcontainer">
-            <input type="password" id="conpassword" placeholder="Confirm password"/>
-            <i class="fa-solid fa-eye-slash" id="eye1"></i>
-            <small>fifth</small>
-          </div>
-          <button type="submit" id="btn">Register</button>
-          <div class="login-link">
-            <p>Do you have an account? <a href="#">Login</a></p>
-        </div>
-        </form>
-      </div>
+      <div id="root"></div>
     </div>
 
-    <!-- FOOTER -->
     <footer>
       <div class="footer-links">
         <a href=""><i class="fa-solid fa-address-card"></i>About Us</a>
         <a href=""><i class="fa-solid fa-address-book"></i>Contact Us</a>
-        <a href="login.html"><i class="fa-solid fa-right-to-bracket"></i>Login</a>
-        <a href="register.html"
-          ><i class="fa-solid fa-address-card"></i>Register</a
-        >
+        <a href="login.php"><i class="fa-solid fa-right-to-bracket"></i>Login</a>
+        <a href="register.php"><i class="fa-solid fa-address-card"></i>Register</a>
       </div>
       <div class="footer-others">
         <div class="footer-icons">
@@ -177,13 +135,11 @@
       </div>
     </footer>
 
-    <!-- THE SCRIPTS -->
     <script
       src="https://kit.fontawesome.com/ed534340a8.js"
       crossorigin="anonymous"
     ></script>
     <script src="./js/nav.js"></script>
-    <script src="./js/register.js"></script>
     <script src="./js/addToCart.js"></script>
   </body>
 </html>
