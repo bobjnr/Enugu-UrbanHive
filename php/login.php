@@ -8,10 +8,10 @@
     <script src="https://kit.fontawesome.com/0170857075.js" crossorigin="anonymous"></script>
 
     <!-- CUSTOM CSS  -->
-    <link rel="stylesheet" href="/stylesheets/index.css" />
-    <link rel="stylesheet" href="/stylesheets/nav.css">
-    <link rel="stylesheet" href="/stylesheets/login.css" type="text/css">
-    <link rel="stylesheet" href="/stylesheets/footer.css">
+    <link rel="stylesheet" href="./stylesheets/index.css" />
+    <link rel="stylesheet" href="./stylesheets/nav.css">
+    <link rel="stylesheet" href="./stylesheets/login.css" type="text/css">
+    <link rel="stylesheet" href="./stylesheets/footer.css">
     <title>Enugu-UrbanHive | Login</title>
 </head>
 <body>
@@ -39,8 +39,8 @@
                 <span id="account">Account</span>
                 <i id="caret-icon" class="fa-solid fa-caret-down"></i>
                 <div class="dropdown-content">
-                  <a href="login.html">Login</a>
-                  <a href="register.html">Register</a>
+                  <a href="login.php">Login</a>
+                  <a href="register.php">Register</a>
                 </div>
               </div>
               <div>
