@@ -35,6 +35,78 @@ body::-webkit-scrollbar-track {
   padding-top: 100px;
 }
 
+.home{
+  padding: 20px 60px;
+  font-family: var(--heading-font);
+  text-transform: uppercase;
+  font-size: xx-large;
+  color: var(--bg-color);
+}
+
+/* THE SLIDE */
+
+/* .slider {
+  position: relative;
+  width: 100%; 
+  height: 50vh; 
+}
+
+.slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: opacity 0.5s;
+}
+
+.current-slide {
+  opacity: 1;
+}
+
+.slider-buttons {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.prev, .next {
+  background-color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.prev:hover, .next:hover {
+  background-color: #ccc;
+}
+
+.slider-dots {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.dot {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: #ccc;
+  cursor: pointer;
+  margin: 0 5px;
+}
+
+.current-dot {
+  background-color: #666;
+} */
+
+
+/* OTHERS */
+
 #root {
   padding: 40px 50px;
   display: grid;
