@@ -19,30 +19,54 @@ const getProducts = fetch("product.json")
   })
   .catch((error) => console.error("Error fetching product data:", error));
 
-let i = 0;
 
-function displayProducts() {
-  const root = document.getElementById("root");
-  root.innerHTML = product
-    .map((item) => {
-      const { image, title, price } = item;
-      return (
-        `<div class='box'>
-              <div class='img-box'>
-                  <img class='images' src=${image}></img>
-              </div>
-          <div class='bottom-content'>
-          <p>${title}</p>
-          <h2>#${price.toLocaleString()}.00</h2>` +
-        "<button onclick='addtocart(" +
-        i++ +
-        ")'>Add to cart</button>" +
-        `</div>
-          </div>`
-      );
-    })
-    .join("");
-}
+  let i = 0;
+
+  function displayProducts() {
+      const root = document.getElementById("root");
+      root.innerHTML = ''; // Clear the content before adding new products
+  
+      product.forEach(item => {
+          const {id, image, title, price } = item;  
+          const newProduct = document.createElement('a');
+          newProduct.href = '/detail.html?id=' + id;
+          newProduct.classList.add('box');
+  
+          const imgBox = document.createElement('div');
+          imgBox.classList.add('img-box');
+  
+          const img = document.createElement('img');
+          img.classList.add('images');
+          img.src = image;
+  
+          imgBox.appendChild(img);
+          newProduct.appendChild(imgBox);
+  
+          const bottomContent = document.createElement('div');
+          bottomContent.classList.add('bottom-content');
+  
+          const titleParagraph = document.createElement('p');
+          titleParagraph.textContent = title;
+  
+          const priceHeading = document.createElement('h2');
+          priceHeading.textContent = `#${price.toLocaleString()}.00`;
+  
+          const addButton = document.createElement('button');
+          addButton.textContent = 'Add to cart';
+          addButton.onclick = function() {
+              addtocart(event, i++);
+          };
+  
+          bottomContent.appendChild(titleParagraph);
+          bottomContent.appendChild(priceHeading);
+          bottomContent.appendChild(addButton);
+  
+          newProduct.appendChild(bottomContent);
+  
+          root.appendChild(newProduct);
+      });
+  }
+  
 
 //   FOR THE CART SUMMARRY
 
@@ -59,7 +83,8 @@ function saveCartToStorage(cart) {
 let cart = getCartFromStorage();
 
 // Function to add item to cart
-function addtocart(a) {
+function addtocart(event, a) {
+  event.preventDefault();
   cart.push({ ...product[a] });
   saveCartToStorage(cart);
   displaycart();
@@ -85,7 +110,7 @@ function displaycart() {
         var { image, title, price } = items;
         total = total + price;
         document.getElementById("total").innerHTML =
-          "$ " + total.toLocaleString() + ".00";
+          "# " + total.toLocaleString() + ".00";
         return (
           `<div class='cart-item'>
                   <div class='row-img'>
@@ -104,8 +129,54 @@ function displaycart() {
 
 displaycart();
 
+function searchProducts() {
+  const searchTerm = document.getElementById("searchInput").value.toLowerCase();
+  const filteredProducts = product.filter(item => item.title.toLowerCase().includes(searchTerm));
 
-// FOR SINGLE PRODUCT PAGE
+  displayFilteredProducts(filteredProducts);
+}
 
-const productBox = document.querySelectorAll('.box');
-console.log(productBox);
+function displayFilteredProducts(filteredProducts) {
+  const root = document.getElementById("root");
+  root.innerHTML = ''; // Clear the content before adding filtered products
+
+  filteredProducts.forEach(item => {
+      const {id, image, title, price } = item;  
+          const newProduct = document.createElement('a');
+          newProduct.href = '/detail.html?id=' + id;
+          newProduct.classList.add('box');
+  
+          const imgBox = document.createElement('div');
+          imgBox.classList.add('img-box');
+  
+          const img = document.createElement('img');
+          img.classList.add('images');
+          img.src = image;
+  
+          imgBox.appendChild(img);
+          newProduct.appendChild(imgBox);
+  
+          const bottomContent = document.createElement('div');
+          bottomContent.classList.add('bottom-content');
+  
+          const titleParagraph = document.createElement('p');
+          titleParagraph.textContent = title;
+  
+          const priceHeading = document.createElement('h2');
+          priceHeading.textContent = `#${price.toLocaleString()}.00`;
+  
+          const addButton = document.createElement('button');
+          addButton.textContent = 'Add to cart';
+          addButton.onclick = function() {
+              addtocart(event, i++);
+          };
+  
+          bottomContent.appendChild(titleParagraph);
+          bottomContent.appendChild(priceHeading);
+          bottomContent.appendChild(addButton);
+  
+          newProduct.appendChild(bottomContent);
+  
+          root.appendChild(newProduct);
+  });
+}
