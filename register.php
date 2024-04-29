@@ -5,16 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Enugu-UrbanHive | Register</title>
     <!-- CUSTOM CSS -->
-<<<<<<< HEAD:php/register.php
-    <link rel="stylesheet" href="./stylesheets/index.css" />
+    <!-- <link rel="stylesheet" href="./stylesheets/index.css" />
     <link rel="stylesheet" href="./stylesheets/nav.css" />
-    <link rel="stylesheet" href="./stylesheets/register.css" />
-=======
+    <link rel="stylesheet" href="./stylesheets/register.css" /> -->
+
     <link rel="stylesheet" href="../stylesheets/index.css" />
     <link rel="stylesheet" href="../stylesheets/nav.css" />
     <link rel="stylesheet" href="./stylesheets/cart.css">
     <link rel="stylesheet" href="../stylesheets/register.css" />
->>>>>>> 3b7eeeda1c24982525174ff28472b9c70d318039:register.html
+
     <link rel="stylesheet" href="./stylesheets/footer.css">
   </head>
   <body>
@@ -117,13 +116,12 @@
       </div>
     </header>
 
-<<<<<<< HEAD:php/register.php
-=======
+
     <!-- Products -->
     
     <div id="root"></div>
 
->>>>>>> 3b7eeeda1c24982525174ff28472b9c70d318039:register.html
+
 
     <!-- THE REGISTRATION PAGE -->
     <?php
