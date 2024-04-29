@@ -45,6 +45,8 @@ body::-webkit-scrollbar-track {
 }
 
 .box {
+  text-decoration: none;
+  color: unset;
   width: 280px;
   display: flex;
   flex-direction: column;

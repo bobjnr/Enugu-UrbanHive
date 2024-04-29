@@ -3,12 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Product</title>
+    <title>Product Page</title>
 
     <!-- CUSTOM CSS -->
     <link rel="stylesheet" href="./stylesheets/nav.css">
     <link rel="stylesheet" href="./stylesheets/cart.css">
     <link rel="stylesheet" href="./stylesheets/index.css">
+    <link rel="stylesheet" href="./stylesheets/detail.css">
 </head>
 <body>
      <!-- THE HEADER -->
@@ -107,17 +108,42 @@
           <button class="cart-summary-btn">Checkout</button>
         </div>
       </header>
+      
       <div class="container">
-        <div class="root"></div>
-          <!-- SINGLE PRODUCT -->
+        <div class="detail-section">
+          <!-- Product Detail Section -->
+          <div class="title">PRODUCT DETAILS</div>
+          <div class="detail">
 
-
+              <div class="image">
+                  <img src="">
+              </div>
+              <div class="content">
+                <h1 class="name"></h1>
+                <div class="description"></div>
+                  <div class="price"></div>
+                  <div class="buttons">
+                      <button>Buy Now</button>
+                      <button class="add-to-cart">Add To Cart 
+                          <span>
+                              <!-- SVG icon -->
+                          </span>
+                      </button>
+                  </div>
+              </div>
+          </div>
+  
+          <!-- Similar Products Section -->
+          <div id="title">Similar product</div>
+          <div class="listProduct"></div>
+      </div>
       </div>
       <script
       src="https://kit.fontawesome.com/ed534340a8.js"
       crossorigin="anonymous"
     ></script>
 <script src="./js/nav.js"></script>
+<script src="./js/detail.js"></script>
 <script src="./js/addToCart.js"></script>
 </body>
 </html>
